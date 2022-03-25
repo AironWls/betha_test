@@ -2,7 +2,6 @@ package br.com.betha_test.betha_test.dto;
 
 import br.com.betha_test.betha_test.orm.PessoaJuridica;
 import org.hibernate.validator.constraints.br.CNPJ;
-import javax.persistence.Column;
 import javax.validation.constraints.NotBlank;
 
 
@@ -10,7 +9,6 @@ public class RequestPessoaJuridica extends RequestPessoa {
 
     @NotBlank
     @CNPJ
-    @Column(unique = true)
     private String cnpj;
 
     public String getCnpj() {

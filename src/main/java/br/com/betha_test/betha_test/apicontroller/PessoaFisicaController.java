@@ -16,7 +16,7 @@ import java.util.Optional;
 public class PessoaFisicaController {
 
     @Autowired
-    IPessoaFisicaRepository pessoaFisicaRepository;
+    private IPessoaFisicaRepository pessoaFisicaRepository;
 
     @PostMapping("store")
     public void store(@Valid @RequestBody RequestPessoaFisica requestPessoaFisica, BindingResult result) {
