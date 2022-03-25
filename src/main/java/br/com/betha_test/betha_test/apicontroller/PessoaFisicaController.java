@@ -21,7 +21,7 @@ public class PessoaFisicaController {
     @PostMapping("store")
     public void store(@Valid @RequestBody RequestPessoaFisica requestPessoaFisica, BindingResult result) {
         if(result.hasErrors()) {
-            System.out.println(result.getAllErrors());
+            System.exit(400);
         }
         PessoaFisica pf = requestPessoaFisica.toPessoaFisica();
         pessoaFisicaRepository.save(pf);

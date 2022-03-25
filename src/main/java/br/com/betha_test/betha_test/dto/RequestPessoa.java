@@ -7,10 +7,10 @@ import javax.validation.constraints.Size;
 
 public class RequestPessoa {
     @NotBlank
-    private String nome;
+    protected String nome;
     @NotBlank
     @Size(min = 6)
-    private String senha;
+    protected String senha;
 
     public String getNome() {
         return nome;
