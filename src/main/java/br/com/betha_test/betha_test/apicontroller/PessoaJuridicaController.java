@@ -1,9 +1,11 @@
 package br.com.betha_test.betha_test.apicontroller;
 
-import br.com.betha_test.betha_test.dto.RequestPessoaJuridica;
+import br.com.betha_test.betha_test.dto.PessoaFisicaDto;
+import br.com.betha_test.betha_test.form.RequestPessoaJuridica;
 import br.com.betha_test.betha_test.orm.PessoaJuridica;
 import br.com.betha_test.betha_test.repository.IPessoaJuridicaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 

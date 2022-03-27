@@ -1,4 +1,4 @@
-package br.com.betha_test.betha_test.dto;
+package br.com.betha_test.betha_test.form;
 
 import br.com.betha_test.betha_test.orm.PessoaJuridica;
 import org.hibernate.validator.constraints.br.CNPJ;

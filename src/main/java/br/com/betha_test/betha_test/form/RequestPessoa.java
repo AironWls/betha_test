@@ -1,6 +1,7 @@
-package br.com.betha_test.betha_test.dto;
+package br.com.betha_test.betha_test.form;
 
 import br.com.betha_test.betha_test.orm.Pessoa;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -12,7 +13,7 @@ public class RequestPessoa {
     @NotBlank
     protected String nome;
     @NotBlank
-    @Size(min = 6)
+    @Length(min = 6)
     protected String senha;
 
     @Bean
