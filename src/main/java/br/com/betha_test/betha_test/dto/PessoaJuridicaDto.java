@@ -1,6 +1,8 @@
 package br.com.betha_test.betha_test.dto;
 
+import br.com.betha_test.betha_test.orm.PessoaFisica;
 import br.com.betha_test.betha_test.orm.PessoaJuridica;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,7 +36,11 @@ public class PessoaJuridicaDto {
         return cnpj;
     }
 
-    public static List<PessoaJuridicaDto> converter(List<PessoaJuridica> pessoaJuridicas) {
-        return pessoaJuridicas.stream().map(PessoaJuridicaDto::new).collect(Collectors.toList());
+//    public static List<PessoaJuridicaDto> converter(List<PessoaJuridica> pessoaJuridicas) {
+//        return pessoaJuridicas.stream().map(PessoaJuridicaDto::new).collect(Collectors.toList());
+//    }
+
+    public static Page<PessoaJuridicaDto> converter(Page<PessoaJuridica> pjs) {
+        return pjs.map(PessoaJuridicaDto::new);
     }
 }

@@ -36,8 +36,9 @@ public class PessoaFisicaController {
     }
 
     @GetMapping
-    public Page<PessoaFisicaDto> index(@RequestParam(required = false) int pagina, @RequestParam(required = false) int qtd, @RequestParam(required = false) String ordenacao) {
-        Pageable paginacao = PageRequest.of(pagina, qtd, Direction.ASC, ordenacao);
+//    public Page<PessoaFisicaDto> index(@RequestParam(required = false) int pagina, @RequestParam(required = false) int qtd, @RequestParam(required = false) String ordenacao) {
+    public Page<PessoaFisicaDto> index(Pageable paginacao) {
+//        Pageable paginacao = PageRequest.of(pagina, qtd, Direction.ASC, ordenacao);
 
         Page<PessoaFisica> pfs = pessoaFisicaRepository.findAll(paginacao);
         return PessoaFisicaDto.converter(pfs);
